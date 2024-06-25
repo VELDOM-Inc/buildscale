@@ -1,0 +1,57 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-index-contact {
+	padding: 100px 0;
+	
+	@include g.smMax {
+		padding: 60px 0;
+	}
+	
+	.e-h2 {
+		margin: 0 0 80px;
+		
+		@include g.smMax {
+			margin: 0 0 70px;
+		}
+		
+		&::after {
+			content: "DOWNLOAD";
+			
+			@include g.smMax {
+				content: "DOWN \A LOAD";
+				white-space: pre-wrap;
+			}
+		}
+	}
+	
+	.m-box {
+		font-size: g.$fz-xs;
+		
+		@include g.smMax {
+			font-size: g.$fz-s;
+		}
+	}
+	
+	.u-al-fc {
+		flex-wrap: nowrap !important;
+		
+		@include g.smMax {
+			flex-wrap: wrap !important;		
+		}
+	}
+	
+	.e-btn-arrow {
+		min-width: 400px;
+		height: 75px;
+		font-size: g.$fz-xxl;
+		font-weight: bold;
+		
+		@include g.smMax {
+			height: 70px;
+			font-size: g.$fz-xl;
+		}
+	}
+	
+}
+
+

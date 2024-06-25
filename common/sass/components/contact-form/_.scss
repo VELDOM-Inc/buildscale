@@ -1,0 +1,11 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-contact-form {
+	padding-top: 80px;
+
+	&__inner {
+		margin-top: -80px;
+		padding-top: 80px;
+	}
+}
+

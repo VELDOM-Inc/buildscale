@@ -1,0 +1,11 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.u-fz-20 {
+	font-size: g.$fz-xl !important;
+	
+	@include g.smMax {
+		&._sm-fz-18_ {
+			font-size: g.$fz-l !important;
+		}
+	}
+}

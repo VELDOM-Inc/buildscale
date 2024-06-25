@@ -1,0 +1,67 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.l-footer {
+	background: g.$baseColor;
+	color: g.$white;
+	padding: 60px 0;
+	
+	@media only screen and (min-width: 890px) and (max-width: 1270px) {
+		padding: 60px 30px;
+	}
+	
+	@include g.smMax {
+		padding: 30px 15px;
+	}
+	
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
+		
+		@include g.smMax {
+			max-width: 100%;
+			margin: 0;
+			flex-direction: column;
+		}
+	}
+	
+	&-logo {
+		width: 250px;
+		
+		@media only screen and (min-width: 890px) and (max-width: 1050px) {
+			width: 200px;
+		}
+		
+		@include g.smMax {
+			margin: 0 auto 30px;
+			text-align: center;
+			max-width: 200px;
+			width: auto;
+		}
+	}
+	
+	&-nav {
+		width: 70%;
+		
+		@media only screen and (min-width: 890px) and (max-width: 1050px) {
+			width: 80%;
+		}
+		
+		@include g.smMax {
+			width: 100%;
+		}
+	}
+	
+	&-copyright {
+		opacity: 0.45;
+		font-size: g.$fz-xs;
+		@include g.font-normal;
+		margin: 15px 0 0;
+		
+		@include g.smMax {
+			margin: 15px 0 0;
+			text-align: center;
+		}
+	}
+}

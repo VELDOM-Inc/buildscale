@@ -1,0 +1,125 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-snav {
+	&Bnr {
+		.__lnik {
+			border: 1px solid #DADADA;
+			display: block;
+		}
+	}
+	
+	&Head {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		padding: 15px 20px;
+		margin: 0 0 25px;
+		background: #E9F0FC;
+		font-size: g.$fz-xxxl;
+		line-height: 1.2;
+		@include g.radius(5);
+		@include g.font-bold;
+		
+		@include g.smMax {
+			font-size: g.$fz-xl;
+			padding: 12px 15px;
+			margin: 0 0 15px;
+		}
+	}
+	
+	&List {
+		&__item {
+			margin: 0 0 15px;
+			
+			@include g.smMax {
+				margin: 0 0 10px;
+			}
+		}
+		&__link {
+			padding: 0 15px 0 25px;
+			text-decoration: none;
+			color: g.$text-black;
+			@include g.font-bold;
+			position: relative;
+			display: inline-block;
+			line-height: 1.3;
+			transition: all .4s;
+			font-size: g.$fz-m;
+			
+			&::before {
+				background: url("/common/img/common/ico_arrow_blue.svg") 0 0 no-repeat;
+				width: 11px;
+				height: 14px;
+				background-size: 100%;
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(0, -50%);
+			}
+			
+			@include g.hover {
+				color: g.$baseColor;
+				@include g.opacity;
+			}
+		}
+		
+		&-col {
+			&__item {
+				border-bottom: 1px dotted #DADADA;
+				padding: 0 0 25px;
+				margin: 0 0 25px;
+			}
+			
+			&__link {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				font-size: 1.7rem;
+				line-height: 1.4;
+				color: g.$text-black;
+				@include g.font-bold;
+				text-decoration: none;
+				transition: all .4s;
+				
+				@include g.hover {
+					color: g.$baseColor;
+					@include g.opacity;
+				}
+				
+				@include g.smMax {
+					font-size: g.$fz-m;
+				}
+			}
+			
+			&__img {
+				width: 37.5%;
+				height: 97px;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 1px solid #DADADA;
+				
+				.__elem {
+					width: auto;
+					height: auto;
+				}
+				
+				@include g.smMax {
+					width: 40%;
+					height: 90px;
+				}
+			}
+			
+			&__txt {
+				width: calc((100% - 37.5%) - 20px);
+				
+				@include g.smMax {
+					width: calc((100% - 40%) - 15px);
+				}
+			}
+		}
+	}	
+}

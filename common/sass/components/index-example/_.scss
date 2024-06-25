@@ -1,0 +1,97 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-index-example {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -23px;
+	
+	@include g.smMax {
+		margin: 0 -10px;
+	}
+	
+	&._col3_ {
+		margin: 0 -20px;
+		
+		@include g.smMax {
+			margin: 0 -10px;
+		}
+		
+		.c-index-example__item {
+			width: calc((100% - 120px) / 3);
+			margin: 0 20px 45px;
+			
+			@include g.smMax {
+				width: calc((100% - 40px) / 2);
+				margin: 0 10px 20px;
+			}
+		}
+	}
+	
+	&__item {
+		width: calc((100% - 184px) / 4);
+		margin: 0 23px 45px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: g.$white;
+		font-size: g.$fz-xxxl;
+		@include g.font-bold;
+		line-height: 1.2;
+		min-height: 178px;
+		text-align: center;
+		
+		@include g.smMax {
+			width: calc((100% - 40px) / 2);
+			margin: 0 10px 20px;
+			min-height: 108px;
+			font-size: g.$fz-l;
+		}
+		
+		&._new-house_ {
+			background: url("/common/img/index/bg_introduction01.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		
+		&._renovation_ {
+			background: url("/common/img/index/bg_introduction02.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		
+		&._office_ {
+			background: url("/common/img/index/bg_introduction03.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		
+		&._trade_ {
+			background: url("/common/img/index/bg_introduction04.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		
+		&._general_ {
+			background: url("/common/img/index/bg_introduction05.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		
+		&._geotechnical_ {
+			background: url("/common/img/index/bg_introduction06.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		
+		&._facilities_ {
+			background: url("/common/img/index/bg_introduction07.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		
+		&._exterior_ {
+			background: url("/common/img/index/bg_introduction08.jpg") center center no-repeat;
+			background-size: cover;
+		}
+		
+		&._plant_ {
+			background: url("/common/img/index/bg_introduction09.jpg") center center no-repeat;
+			background-size: cover;
+		}
+	}
+}
+
+

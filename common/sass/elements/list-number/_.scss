@@ -1,0 +1,51 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.e-list-number {
+	counter-reset: number 0;
+	&__item {
+		position: relative;
+		padding-left: 1.4em;
+		line-height: 1.4;
+		
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+		&::before {
+			counter-increment: number;
+			content: counter(number)".";
+			color: g.$text-black;
+			display: block;
+			position: absolute;
+			left: 0;
+		}
+	}
+	&._red_ &__item {
+		&::before {
+			color: g.$red;
+		}
+	}
+	
+	&._blue-number_ &__item {
+		padding: 0 0 0 50px;
+		margin: 0 0 20px;
+		
+		&::before {
+			content: counter(number);
+			position: absolute;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			background: g.$baseColor;
+			border-radius: 50%;
+			font-size: g.$fz-l;
+			color: g.$white;
+			width: 35px;
+			height: 35px;
+			line-height: 1.0;
+			text-align: center;
+			top: 0;
+			left: 0;
+			@include g.font-bold;
+		}
+	}
+}

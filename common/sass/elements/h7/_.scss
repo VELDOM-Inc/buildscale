@@ -1,0 +1,16 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.e-h7 {
+	margin: 0 0 40px;
+	padding: 3px 0 3px 15px;
+	border-left: 5px solid g.$baseColor;
+	font-size: 3.0rem;
+	line-height: 1.4;
+	@include g.font-bold;
+
+	@include g.smMax {
+		margin: 0 0 20px;
+		padding: 2px 0 3px 10px;
+		font-size: g.$fz-xxxl;
+	}
+}

@@ -1,0 +1,124 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.m-pagination {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 30px 0 0;
+	line-height: 1.4;
+
+	&__item {
+		margin: 0 3px 5px;
+
+		@include g.smMax {
+			margin-bottom: 10px;
+		}
+		
+		&._left_ {
+			.m-pagination__link {
+				min-width: 45px;
+				line-height: 1.0;
+				background: #E9F0FC;
+				border: 1px solid #E9F0FC;
+				
+				@include g.hover {
+					background: g.$baseColor;
+					border: 1px solid g.$baseColor;
+					.__ico {
+						&::before {
+							background: url("/common/img/common/ico_arrow_white.svg") 0 0 no-repeat;
+							width: 13px;
+							height: 14px;
+							background-size: 100%;
+						}
+					}
+				}
+			}
+			.__ico {
+				position: relative;
+				
+				&::before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					right: 50%;
+					background: url("/common/img/common/ico_arrow_blue.svg") 0 0 no-repeat;
+					width: 13px;
+					height: 14px;
+					background-size: 100%;
+					transform: translate(50%, -50%) rotate(180deg);
+				}
+			}
+		}
+		
+		&._right_ {
+			.m-pagination__link {
+				min-width: 45px;
+				line-height: 1.0;
+				background: #E9F0FC;
+				border: 1px solid #E9F0FC;
+				
+				@include g.hover {
+					background: g.$baseColor;
+					border: 1px solid g.$baseColor;
+					.__ico {
+						&::before {
+							background: url("/common/img/common/ico_arrow_white.svg") 0 0 no-repeat;
+							width: 13px;
+							height: 14px;
+							background-size: 100%;
+						}
+					}
+				}
+			}
+			.__ico {
+				position: relative;
+				
+				&::before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					background: url("/common/img/common/ico_arrow_blue.svg") 0 0 no-repeat;
+					width: 13px;
+					height: 14px;
+					background-size: 100%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 15px;
+		background: g.$white;
+		border: 1px solid g.$baseColor;
+		color: g.$baseColor;
+		text-decoration: none;
+		@include g.radius(3);
+		@include g.font-bold;
+		min-height: 48px;
+		@include g.transition;
+
+		@include g.smMax {
+			padding: 8px 15px;
+		}
+		&._current_ {
+			background: g.$baseColor;
+			color: g.$white;
+			opacity: 1;
+		}
+		@include g.hover {
+			background: g.$baseColor;
+			color: g.$white;
+			opacity: 1;
+		}
+		
+		.__hidden {
+			display: none;
+		}
+	}
+}

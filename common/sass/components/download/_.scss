@@ -1,0 +1,58 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-download {
+	&-ttl {
+		background: rgba(g.$baseColor, 0.09);
+		padding: 30px 60px 0 60px;
+		/*padding: 30px 15px 40px 50px;*/
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include g.radius(20);
+		max-width: 900px;
+		margin: 0 auto;
+		
+		@include g.smMax {
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			padding: 25px 20px 0;
+			text-align: center;
+		}
+		
+		&__txt {
+			width: 50%;
+			@include g.smMax {
+				width: 100%;
+				margin: 0 0 10px;
+			}
+		}
+		
+		&__img {
+			width: 50%;
+			@include g.smMax {
+				width: 90%;
+				margin: 0 10px 0 auto;
+			}
+		}
+		
+		&__title {
+			color: g.$baseColor;
+			margin: 0 0 20px;
+			font-size: 3.4rem;
+			line-height: 1.2;
+			@include g.font-bold;
+			
+			@include g.smMax {
+				font-size: 2.6rem;
+				margin: 0 0 10px;
+			}
+		}
+		
+		&__detail {
+			@include g.font-medium;
+		}
+	}
+}
+
+

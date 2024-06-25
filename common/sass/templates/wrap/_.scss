@@ -1,0 +1,17 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.t-wrap {
+	color: g.$text-black;
+	font-size: g.$fz-l;
+	line-height: 1.6;
+	overflow: hidden;
+
+	@include g.smMax {
+		font-size: g.$fz-m;
+	}
+	
+	&._blog_ {
+		margin: 80px 0 0;
+		border-top: 1px dotted rgba(g.$line-gray, 0.4);
+	}
+}

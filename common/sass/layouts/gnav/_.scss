@@ -1,0 +1,124 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.l-gnav {
+	&__list {
+		display: flex;
+		margin: 0 60px 0 0;
+		
+		@media only screen and (min-width: 890px) and (max-width: 1480px) {
+			margin: 0 10px 0 0;
+		}
+		
+		@include g.smMax {
+			flex-direction: column;
+			margin: 0;
+			border-top: 1px dotted rgba(g.$white, 0.5);
+		}
+	}
+	
+	&__item {
+		margin: 0 20px;
+		
+		@media only screen and (min-width: 1270px) and (max-width: 1480px) {
+			margin: 0 10px;
+		}
+		
+		@media only screen and (min-width: 890px) and (max-width: 1270px) {
+			margin: 0 5px;
+		}
+		
+		@include g.smMax {
+			margin: 0;
+			border-bottom: 1px dotted rgba(g.$white, 0.5);
+		}
+	}
+	
+	&__link {
+		color: g.$text-black;
+		text-decoration: none;
+		@include g.transition;
+		@include g.font-medium;
+		letter-spacing: 2px;
+		
+		@include g.hover {
+			@include g.opacity;
+		}
+		
+		@media only screen and (min-width: 890px) and (max-width: 1190px) {
+			font-size: 1.3rem;
+			letter-spacing: 0;
+		}
+		
+		@include g.smMax {
+			display: block;
+			padding: 15px 15px 15px 25px;
+			color: g.$white;
+			background: url("/common/img/common/ico_arrow_white.svg") 0 center no-repeat;
+			background-size: 13px;
+			font-size: 1.7rem;
+		}
+	}
+	
+	@include g.smMax {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		padding: 80px 15px 15px;
+		background: rgba(g.$baseColor, 0.95);
+		opacity: 0;
+		overflow-y: auto;
+		overscroll-behavior-y: contain;
+		pointer-events: none;
+		@include g.transition;
+
+		._gnav-show_ & {
+			z-index: 1;
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+	
+	&-btn {
+		@include g.smMin {
+			display: none;
+		}
+		
+		@include g.smMax {
+			margin: 20px 0 0;
+			
+			.__link {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				padding: 8px 50px 12px;
+				height: 65px;
+				width: 100%;
+				background: g.$white;
+				color: g.$baseColor;
+				font-size: g.$fz-xxl;
+				@include g.font-bold;
+				text-decoration: none;
+				@include g.radius(40);
+				@include g.transition;
+				position: relative;
+				line-height: 1.0;
+			}
+			
+			.__ico {
+				position: absolute;
+				top: 50%;
+				transform: translate(0, -50%);
+
+				&:first-child {
+					left: 15px;
+				}
+				&:last-child {
+					right: 15px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.l-contents {
+	max-width: 1200px;
+	margin: 0 auto 80px;
+	text-align: left;
+
+	@media only screen and (min-width: 890px) and (max-width: 1310px) {
+		margin: 0 30px 80px;
+	}	
+	
+	@include g.smMax {
+		margin: 0 15px 80px;
+	}
+	
+	&._blog_ {
+		margin-bottom: 160px;
+		
+		@media only screen and (min-width: 890px) and (max-width: 1310px) {
+			margin-bottom: 80px;
+		}
+		
+		@include g.smMax {
+			margin-bottom: 40px;
+		}
+	}
+	
+	.contact-inner {
+		@include g.smMax {
+			padding: 0 !important;
+		}
+	}
+	
+	// 以下不要な場合削除
+	// 2カラムレイアウト-------------------------------
+	&._col2_ &__inner {
+		@include g.smMin {
+			display: grid;
+			grid-template-columns: 440px 1fr;
+			grid-template-rows: auto;
+			gap: 0 60px;
+			grid-template-areas: "side body";
+		}
+		@include g.smMax {
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto;
+			gap: 30px 0;
+			grid-template-areas:
+				"side"
+				"body";
+		}
+	}
+	&._col2_ &__body { grid-area: body; }
+	&._col2_ &__side { 
+		grid-area: side;
+	}
+	
+	&._blog_ &__inner {
+		@media only screen and (min-width: 890px) and (max-width: 1200px) {
+			grid-template-columns: 1fr 300px;
+			gap: 0 50px;
+		}	
+
+		@include g.smMin {
+			display: grid;
+			grid-template-columns: 1fr 400px;
+			grid-template-rows: auto;
+			gap: 0 80px;
+			grid-template-areas: "body side";
+		}
+		
+		@include g.smMax {
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto;
+			gap: 50px 0;
+			grid-template-areas:
+				"body"
+				"side";
+		}
+	}
+	
+	// 3カラムレイアウト-------------------------------
+	&._col3_ &__inner {
+		@include g.mdMin {
+			display: grid;
+			grid-template-columns: minmax(200px, 25%) 1fr minmax(200px, 25%);
+			grid-template-rows: auto;
+			gap: 0 30px;
+			grid-template-areas: "left main right";
+		}
+		@include g.mdMax {
+			display: grid;
+			grid-template-columns: 100%;
+			grid-template-rows: auto auto auto;
+			gap: 50px 0;
+			grid-template-areas:
+				"main"
+				"right"
+				"left";
+		}
+	}
+	&._col3_ &__body { grid-area: main; }
+	&._col3_ &__left { grid-area: left; }
+	&._col3_ &__right { grid-area: right; }
+}

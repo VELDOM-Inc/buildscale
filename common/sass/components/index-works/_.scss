@@ -1,0 +1,39 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-index-works {
+	background: g.$baseColor;
+	padding: 90px 0;
+	
+	@include g.smMax {
+		padding: 50px 0;
+	}
+	
+	.e-h2 {
+		margin: 0 0 110px;
+		
+		@include g.smMax {
+			margin: 0 0 40px;
+		}
+		
+		&::after {
+			content: "WORKS";
+		}
+	}
+	
+	&__txt {
+		text-align: center;
+		color: g.$white;
+		font-size: 6.4rem;
+		@include g.font-thick;
+		line-height: 1.0;
+		letter-spacing: 6.4px;
+		
+		@include g.smMax {
+			font-size: 3.2rem;
+			letter-spacing: 3.2px;
+		}
+	}
+	
+}
+
+

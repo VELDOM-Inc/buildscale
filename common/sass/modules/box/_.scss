@@ -1,0 +1,26 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.m-box {
+	padding: 30px;
+	background: g.$white;
+
+	@include g.smMax {
+		padding: 15px;
+	}
+	&._gray_ {
+		background: #f9f9f9;
+	}
+	&._line-gray_ {
+		border: 1px solid rgba(g.$line-gray, 0.25);
+	}
+	&._red_ {
+		background: rgba(g.$red, 0.1);
+		border: 1px solid g.$red;
+	}
+	&._blue_ {
+		background: rgba(g.$baseColor, 0.09);
+	}
+	&._radius_ {
+		@include g.radius(20);
+	}
+}

@@ -1,0 +1,64 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+
+html {
+	@include g.smMin {
+		overflow-y: scroll;
+	}
+	@include g.smBtMd {
+		font-size: calc(100vw / 102.4);
+	}
+}
+body {
+	@include g.font-normal;
+	
+	&._gnav-show_ {
+		@include g.smMax {
+			overflow-y: hidden;
+		}
+	}
+}
+a {
+	color: g.$baseColor;
+	text-decoration: underline;
+	
+	@include g.hover {
+		text-decoration: none;
+	}
+	.icon-filter_none::before {
+		display: inline-block;
+	}
+}
+
+.link-opacity {
+    transition: all .4s;
+			
+	@include g.hover {
+		@include g.opacity;
+	}
+}
+
+sup {
+	vertical-align: super;
+}
+input,
+textarea {
+	appearance: none;
+	max-width: 100%;
+}
+input,
+select,
+textarea {
+	@include g.smMax {
+		font-size: g.$fz-m !important;
+	}
+}	
+input::placeholder {
+	opacity: .5;
+}
+button,
+input[type="button"],
+input[type="submit"] {
+	appearance: none;
+}
+

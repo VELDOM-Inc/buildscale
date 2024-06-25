@@ -1,0 +1,50 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.e-form-radio {
+	.__elem {
+		display: none;
+		&:checked + .__txt {
+			&::after {
+				opacity: 1;
+			}
+			&::before {
+				border: 1px solid g.$baseColor;
+			}
+		}
+	}
+	
+	.__txt {
+		position: relative;
+		padding: 0 0 0 25px;
+		cursor: pointer;
+		line-height: 1.2;
+		
+		@include g.smMax {
+			padding: 0 0 0 28px;				
+		}
+		
+		&::before {
+			left: 0;
+			content: '';
+			border: 1px solid g.$line-gray;
+			@include g.centering-elements(false, true);
+			@include g.circle(14);
+			
+			@include g.smMax {
+				@include g.circle(18);
+			}
+		}
+		&::after {
+			left: 4px;
+			content: '';
+			background: g.$baseColor;
+			opacity: 0;
+			@include g.centering-elements(false, true);
+			@include g.circle(8);
+			
+			@include g.smMax {
+				@include g.circle(12);
+			}
+		}
+	}
+}

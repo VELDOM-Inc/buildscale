@@ -1,0 +1,53 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-index-what {
+	background: g.$baseColor;
+	padding: 180px 0 20px;
+	margin-top: -55px;
+	
+	@include g.smMax {
+		margin-top: 0;
+		padding: 60px 0 20px;
+	}
+	
+	.e-h2 {
+		@include g.smMax {
+			margin: 0 0 40px;
+		}
+		
+		&::after {
+			content: "WHAT IS?";
+		}
+	}
+	
+	&__box {
+		border-radius: 24px;
+		background: g.$white;
+		box-shadow: 8px 4px 20px 0 rgba(0, 0, 0, 0.25);
+		padding: 10px;
+		text-align: center;
+		font-size: 4.0rem;
+		line-height: 1.3;
+		@include g.font-bold;
+		
+		.__blue {
+			color: g.$baseColor;
+			font-size: 5.0rem;
+			
+			@media only screen and (min-width: 890px) and (max-width: 1160px) {
+				font-size: 4.8rem;
+			}
+			
+			@include g.smMax {
+				font-size: g.$fz-xxxl;
+			}
+		}
+		
+		@include g.smMax {
+			padding: 10px 20px;
+			font-size: g.$fz-xl;
+		}
+	}
+}
+
+

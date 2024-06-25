@@ -1,0 +1,55 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.e-h2 {
+	text-align: center;
+	font-size: 4.0rem;
+	@include g.font-bold;
+	line-height: 1.2;
+	margin: 0 0 70px;
+	position: relative;
+	
+	@include g.smMax {
+		font-size: g.$fz-xxxl;
+		padding: 3px 0 0;
+	}
+	
+	&._blue_ {
+		color: g.$baseColor;
+		
+		&::after {
+			color: #0045CE;
+		}
+	}
+	
+	&._white_ {
+		color: g.$white;
+		
+		&::after {
+			color: g.$white;
+			opacity: 0.25;
+		}
+	}
+	
+	&::after {
+		font-size: 12.0rem;
+		font-style: normal;
+		@include g.font-thick;
+		line-height: 1.0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0.1;
+		letter-spacing: 12.4px;
+		white-space: nowrap;
+		
+		@include g.smMax {
+			font-size: 6.4rem;
+			letter-spacing: 6.4px;
+		}
+	}
+	
+	.__blue {
+		color: g.$baseColor;
+	}
+}

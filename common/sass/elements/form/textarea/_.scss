@@ -1,0 +1,16 @@
+@charset "utf-8";
+@use "../../../global/_" as g;
+.e-form-textarea {
+	display: inline-block;
+	width: 100%;
+	padding: 8px 15px;
+	border-radius: 8px;
+	background: #F3F3F3;
+	border: none;
+	color: g.$text-black;
+	resize: vertical;
+	
+	&._h-m_ {
+		min-height: 145px;
+	}
+}

@@ -1,0 +1,122 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-blog {
+	&Block {
+		margin: 0 0 40px;
+		padding: 0 0 80px;
+		border-bottom: 1px dotted #DADADA;
+		
+		@include g.smMax {
+			margin: 0 0 20px;
+			padding: 0 0 30px;
+		}
+	}
+	
+	&List {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+		
+		@include g.smMax {
+			flex-direction: column;
+			margin: 0;
+		}
+		
+		&__item {
+			width: calc((100% - 80px) / 2);
+			margin: 0 20px 40px;
+			
+			@include g.smMax {
+				width: 100%;
+				border-bottom: 1px dotted #DADADA;
+				padding: 0 0 25px;
+				margin: 0 0 25px;
+				
+				&:last-child {
+					border-bottom: none;
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+		
+		&__link {
+			display: block;
+			text-decoration: none;
+			transition: all .4s;
+				
+			@include g.hover {
+				.c-blogList__ttl {
+					color: g.$baseColor;
+				}
+			}
+			
+			@include g.smMax {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
+		}
+		
+		&__img {
+			margin: 0 0 20px;
+			height: 220px;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #DADADA;
+			
+			@include g.smMax {
+				width: 40%;
+				height: 120px;
+				margin: 0;
+			}
+			
+			.__elem {
+				width: auto;
+				height: auto;
+			}
+		}
+		
+		&__detail {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			
+			@include g.smMax {
+				width: calc((100% - 40%) - 15px);
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
+			
+			.__date {
+				color: #636363;
+				font-size: 1.5rem;
+				
+				@include g.smMax {
+					font-size: g.$fz-xs;
+					margin: 0 0 5px;
+				}
+			}
+		}
+		
+		&__ttl {
+			@include g.font-bold;
+			font-size: 1.9rem;
+			line-height: 1.4;
+			color: g.$text-black;
+			transition: all .4s;
+			width: 100%;
+			margin: 15px 0 0;
+			
+			@include g.smMax {
+				margin: 10px 0 0;
+				font-size: g.$fz-m;
+				line-height: 1.3;
+			}
+		}
+	}
+}

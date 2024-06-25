@@ -1,0 +1,102 @@
+@charset "utf-8";
+@use "../../global/_" as g;
+.c-index-issues {
+	position: relative;
+	padding: 130px 0 0;
+	
+	@include g.smMax {
+		padding: 50px 0 0;
+	}
+	
+	&::before {
+		background: #F7F7F7;
+    content: "";
+    display: block;
+    width: 100%;
+		height: 610px;
+    position: absolute;
+		top: 0;
+    left: 0;
+    z-index: -1;
+		
+		@include g.smMax {
+			height: 760px;
+		}
+	}
+	
+	&::after {
+		@include g.smMax {
+			background: g.$baseColor;
+			content: "";
+			display: block;
+			width: 100%;
+			height: 150px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+		}
+	}
+	
+	.e-h2 {
+		margin: 0 0 100px;
+		
+		@include g.smMax {
+			margin: 0 0 70px;
+		}
+		
+		&::after {
+			content: "ISSUES";
+		}
+	}
+	
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -45px;
+		
+		@include g.smMax {
+			flex-direction: column;
+			margin: 0;
+		}
+	}
+	
+	&__item {
+		margin: 0 45px;
+		padding: 0 0 20px;
+		width: calc((100% - 270px) / 3);
+		border-radius: 24px;
+		background: g.$white;
+		box-shadow: 8px 4px 20px 0 rgba(0, 0, 0, 0.25);
+		
+		@include g.smMax {
+			width: 100%;
+			margin: 0 0 55px;
+			padding: 0 0 25px;
+			border-radius: 24px;
+			box-shadow: 4px 2px 16px 0 rgba(0, 0, 0, 0.25);
+		}
+	}
+	
+	&__img {
+		margin: -30px 20px 30px;
+		
+		@include g.smMax {
+			margin: -30px 20px 20px;
+		}
+	}
+	
+	&__txt {
+		margin: 0 20px;
+		font-size: g.$fz-xxxl;
+		@include g.font-bold;
+		line-height: 1.6;
+		text-align: center;
+		
+		@include g.smMax {
+			font-size: g.$fz-l;
+		}
+	}
+}
+
+
