@@ -30,7 +30,7 @@ require_once("./src/bootstrap.php");
 
 		<div class="t-wrap">
 			<!--============================================== header -->
-			<?php include($_SERVER['DOCUMENT_ROOT']).'/common/inc/header.html'; ?>
+			<?php include($_SERVER['DOCUMENT_ROOT']).'/common/inc/header03.html'; ?>
 			<!--============================================== /header -->
 			
 			<h1 class="e-h1">
@@ -100,7 +100,7 @@ require_once("./src/bootstrap.php");
 			<!-- /.l-contents -->
 			
 			<!--============================================== footer -->
-			<?php include($_SERVER['DOCUMENT_ROOT']).'/common/inc/footer.html'; ?>
+			<?php include($_SERVER['DOCUMENT_ROOT']).'/common/inc/footer03.html'; ?>
 			<!--============================================== /footer -->
 		</div>
 		

@@ -27,7 +27,7 @@
 
 		<div class="t-wrap">
 			<!--============================================== header -->
-			<?php include($_SERVER['DOCUMENT_ROOT']).'/common/inc/header.html'; ?>
+			<?php include($_SERVER['DOCUMENT_ROOT']).'/common/inc/header03.html'; ?>
 			<!--============================================== /header -->
 			
 			<h1 class="e-h1">
@@ -60,7 +60,7 @@
 			<!-- /.l-contents -->
 			
 			<!--============================================== footer -->
-			<?php include($_SERVER['DOCUMENT_ROOT']).'/common/inc/footer.html'; ?>
+			<?php include($_SERVER['DOCUMENT_ROOT']).'/common/inc/footer03.html'; ?>
 			<!--============================================== /footer -->
 		</div>
 		
