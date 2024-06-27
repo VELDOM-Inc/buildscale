@@ -38,9 +38,9 @@ require_once("./src/bootstrap.php");
 				<div class="c-index-visual__inner">
 					<div class="c-index-visual__txt">
 						<h1 class="__ttl">建設業界特化</h1>
-						<p class="__detail">技術者の即戦力化を支援<br>
-							保有資格と連動した人員配置や<br>
-						知見の蓄積・若手の育成が可能</p>
+						<p class="__detail">最適な技術者配置で<br>施工できる案件数を増加<br>
+							属人化している人員配置を標準化<br>
+						さらに若手技術者の育成機会最大化</p>
 						<a href="#contact" class="e-btn-arrow _m-0_">
 							<span class="__txt">無料で<br>資料ダウンロード</span>
 							<span class="__ico">
@@ -62,21 +62,21 @@ require_once("./src/bootstrap.php");
 					<ul class="c-index-issues__list">
 						<li class="c-index-issues__item">
 							<div class="c-index-issues__img">
-								<img src="/common/img/index/img_issues07.png" alt="現場担当者の人員配置計画・変更が煩雑で時間がかかっている" class="__elem lazyload u-w100p">
+								<img src="/common/img/index/img_issues05.png" alt="現場担当者の人員配置計画・変更が煩雑で時間がかかっている" class="__elem lazyload u-w100p">
 							</div>
-							<p class="c-index-issues__txt">現場技術者の<br class="u-sm-min">人員配置計画・変更業務が<br class="u-sm-min">煩雑で時間がかかっている</p>
+							<p class="c-index-issues__txt">いきあたりばったりの<br class="u-sm-min">人員配置によって<br class="u-sm-min">受注案件を増やせない</p>
 						</li>
 						<li class="c-index-issues__item">
 							<div class="c-index-issues__img">
-								<img src="/common/img/index/img_issues05.png" alt="工種ごとの協力会社の手配状況が分からず工程管理ができていない" class="__elem lazyload u-w100p">
+								<img src="/common/img/index/img_issues08.png" alt="工種ごとの協力会社の手配状況が分からず工程管理ができていない" class="__elem lazyload u-w100p">
 							</div>
-							<p class="c-index-issues__txt">若手技術者育成のための<br class="u-sm-min">知見・ノウハウの<br class="u-sm-min">蓄積や活用ができていない</p>
+							<p class="c-index-issues__txt">人員配置の基準が<br class="u-sm-min">工事部長に<br class="u-sm-min">属人化している</p>
 						</li>
 						<li class="c-index-issues__item">
 							<div class="c-index-issues__img">
-								<img src="/common/img/index/img_issues08.png" alt="現場担当者と協力会社の保有資格が人員配置と一致していない" class="__elem lazyload u-w100p">
+								<img src="/common/img/index/img_issues07.png" alt="現場担当者と協力会社の保有資格が人員配置と一致していない" class="__elem lazyload u-w100p">
 							</div>
-							<p class="c-index-issues__txt">現場技術者の<br class="u-sm-min">保有資格や過去の実績が<br class="u-sm-min">人員配置と一致していない</p>
+							<p class="c-index-issues__txt">若手技術者の育成を<br class="u-sm-min">加味した<br class="u-sm-min">人員配置ができていない</p>
 						</li>
 					</ul>
 				</div>
@@ -89,7 +89,7 @@ require_once("./src/bootstrap.php");
 				<div class="c-index-inner">
 					<div class="c-index-what__box">
 						<p class="c-index-what__txt">ビルドスケールは<br>
-							<span class="__blue">現場技術者の即戦力化を支援する</span><br>ツールです！</p>
+							<span class="__blue">最適な技術者配置で施工できる案件数を最大化する</span><br>ツールです！</p>
 					</div>
 				</div>
 			</section>

@@ -52,7 +52,7 @@
 	}
 	
 	&__img {
-		width: 34.17%;
+		width: 46%;
 		
 		@include g.smMax {
 			order: 2;
@@ -61,7 +61,7 @@
 	}
 	
 	&__detail {
-		width: 62.5%;
+		width: 49%;
 		
 		@include g.smMax {
 			order: 1;
